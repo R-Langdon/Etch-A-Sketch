@@ -5,6 +5,12 @@
 
 h1 {
   text-align: center;
+  padding: 20px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 60px;
+  color: #000000;
+  -webkit-text-fill-color: #E30B0B; /*If not supported color will be black*/
+  -webkit-text-stroke: 2px black;
 }
 
 #selectSize {
@@ -13,17 +19,41 @@ h1 {
 }
 
 #newSize {
-  width: 250px;
+  width: 318px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  padding: 0 5px;
 }
 
-#reset {
-  display: block;
-  margin: 0 auto;
+button {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  padding: 0 5px;
+  background: #EDEDED;
+  border: 1px solid gray;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 #eraser {
   display: block;
   margin: 0 auto;
+}
+
+button:focus, button:focus:active {
+  outline: 0;
+}
+
+button:active {
+  box-shadow: inset 0 0 5px #5B5B5B;
+}
+
+#eraser:active {
+  box-shadow: none;
+}
+
+.eraserSelect {
+  box-shadow: inset 0 0 5px #5B5B5B;
 }
 
 #colorPicker {
@@ -32,7 +62,7 @@ h1 {
   height: 20px;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 5px;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 #canvas {
@@ -68,7 +98,7 @@ h1 {
 }
 
 #gray {
-  background-color: #707070;
+  background-color: #000000;
 }
 
 #rainbow {

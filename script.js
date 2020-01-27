@@ -15,30 +15,37 @@ reset.addEventListener('click', resetCanvas);
 
 eraser.addEventListener('click', () => {
   cellColor = "eraser";
+  toggleEraser();
 })
 
 blue.addEventListener('click', () => {
   cellColor = "blue";
+  toggleEraser();
 })
 
 green.addEventListener('click', () => {
   cellColor = "green";
+  toggleEraser();
 })
 
 red.addEventListener('click', () => {
   cellColor = "red";
+  toggleEraser();
 })
 
 gray.addEventListener('click', () => {
   cellColor = "gray";
+  toggleEraser();
 })
 
 rainbow.addEventListener('click', () => {
   cellColor = "rainbow";
+  toggleEraser();
 })
 
 shaded.addEventListener('click', () => {
   cellColor = "rgba(155, 155, 155, 0.11)";
+  toggleEraser();
 })
 
 /*Initialize canvas*/
@@ -122,4 +129,13 @@ function resetCanvas() {
 function getRandom() {
   let color = `rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, 0.91)`;
   return color;
+}
+
+/*Applies a class to the eraser button if selected*/
+function toggleEraser() {
+  if (cellColor == "eraser") {
+    eraser.classList.add('eraserSelect');
+  } else {
+    eraser.classList.remove('eraserSelect');
+  }
 }
